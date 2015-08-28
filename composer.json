@@ -1,0 +1,21 @@
+{
+    "name": "shanestevenlei/laravel5-file-uploader",
+    "description": "Laravel5 file uploader",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ShaneStevenLei",
+            "email": "shanestevenlei@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShaneStevenLei\\FileUploader\\": "src/FileUploader"
+        }
+    }
+}
