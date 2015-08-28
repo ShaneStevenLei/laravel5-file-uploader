@@ -41,5 +41,4 @@ class FileUploaderServiceProvider extends ServiceProvider
             return new \ShaneStevenLei\FileUploader\FileUploader();
         });
     }
-
 }
