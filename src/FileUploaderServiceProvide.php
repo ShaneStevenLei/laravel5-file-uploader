@@ -32,7 +32,7 @@ class FileUploaderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('FileUploader', function ($app) {
+        $this->app->blind('FileUploader', function ($app) {
             return new FileUploader();
         });
     }
