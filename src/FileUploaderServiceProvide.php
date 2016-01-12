@@ -13,7 +13,6 @@ use Illuminate\Support\ServiceProvider;
 
 class FileUploaderServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap the application services.
      *
@@ -23,13 +22,9 @@ class FileUploaderServiceProvider extends ServiceProvider
     {
         // Publish config files
         $this->publishes([
-            __DIR__ . '/../config/fileuploader.php' => config_path('fileuploader.php')
-        ]);
-        $this->publishes([
             __DIR__ . '/config/resumable' => base_path('public/resumable'),
         ]);
     }
-
     /**
      * Register the application services.
      *
@@ -38,7 +33,7 @@ class FileUploaderServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('FileUploader', function ($app) {
-            return new \ShaneStevenLei\FileUploader\FileUploader();
+            return new FileUploader();
         });
     }
 }
